@@ -4,9 +4,9 @@ const themeConfig = require('./config/themeConfig.js');
 
 module.exports = {
   theme: 'vdoing', // 使用npm包主题
-  title: "vdoing-template",
+  title: "Baipf-blog",
   description: 'vdoing博客主题模板',
-  base: '/vdoing-template/', // 格式：'/<仓库名>/'， 默认'/'
+  base: '/Baipf-blog/', // 格式：'/<仓库名>/'， 默认'/'
   markdown: {
     lineNumbers: true, // 代码行号
   },
@@ -14,4 +14,21 @@ module.exports = {
   head,
   plugins,
   themeConfig,
+  plugins: [
+    [
+      "vuepress-plugin-vssue-global",
+      {
+        platform: "github",
+        title: "[Comment]<%- frontmatter.title %>",
+        needComments: true,
+        // 其他的 Vssue 配置
+        autoCreateIssue: true,
+        clientId: "Ov23liqprGb5jE0ikxuZ",
+        clientSecret: "779812473b32e8aa3e9d3320e7106eaf32e230f0",
+        owner: "baipengfeifei",
+        repo: "Baipf-blog",
+      },
+    ],
+  ],
 }
+// vssue 评论插件
