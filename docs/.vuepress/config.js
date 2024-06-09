@@ -14,4 +14,20 @@ module.exports = {
   head,
   plugins,
   themeConfig,
+  plugins: [
+    [
+      "vuepress-plugin-vssue-global",
+      {
+        platform: "github",
+        title: "[Comment]<%- frontmatter.title %>",
+        needComments: true,
+        // 其他的 Vssue 配置
+        autoCreateIssue: true,
+        clientId: "Ov23liqprGb5jE0ikxuZ",
+        clientSecret: "779812473b32e8aa3e9d3320e7106eaf32e230f0",
+        owner: "baipengfeifei",
+        repo: "Baipf-blog",
+      },
+    ],
+  ],
 }
