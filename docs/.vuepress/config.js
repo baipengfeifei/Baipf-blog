@@ -31,4 +31,7 @@ module.exports = {
     ],
   ],
 }
+<<<<<<< HEAD
 // vssue 评论插件
+=======
+>>>>>>> 0481cefbb2fa36e317771a319bdf8de56bc37d12
